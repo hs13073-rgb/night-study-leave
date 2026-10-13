@@ -125,7 +125,7 @@
       <button class="btn add" id="addDates" type="button">加入日期</button>
       <div class="chips" id="chips" aria-live="polite"></div>
       <p class="muted small" id="dateHint" style="margin:10px 0 0"></p>
-      <p id="noDates" class="muted small" hidden>目前沒有可以線上請假的日期,請直接聯絡導師。</p>
+      <p id="noDates" class="muted small" hidden>目前沒有可以線上請假的日期,請直接聯絡教務處。</p>
 
       <h2 style="margin-top:22px">請假節次</h2>
       <div class="strip" id="strip" role="group" aria-label="請假節次"></div>
@@ -195,7 +195,7 @@
       setBusy(false); ok(res);
     }).catch(function (e) {
       setBusy(false);
-      showBanner('error', '系統暫時無法使用,請稍後再試,或直接聯絡導師。');
+      showBanner('error', '系統暫時無法使用,請稍後再試,或直接聯絡教務處。');
       console.error(e);
     });
   }
@@ -236,7 +236,7 @@
     $('note').maxLength = cfg.noteMax;
     $('breaks').textContent = '下課時間:' + cfg.breaks.join('、');
     $('dateHint').textContent = '連續請假:「從」選第一天、「到」選最後一天,再按加入日期。不連續的日子可以分次加入,一次最多 ' + cfg.maxDates + ' 天。';
-    $('cutoffNote').textContent = '當天 ' + cfg.cutoff + ' 之後無法線上請假或撤銷,請直接聯絡導師。';
+    $('cutoffNote').textContent = '當天 ' + cfg.cutoff + ' 之後無法線上請假或撤銷,請直接聯絡教務處。';
     buildStrip();
   }
 
